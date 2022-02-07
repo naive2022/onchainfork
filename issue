@@ -12,7 +12,7 @@ a- general configurations(system, version, smart contract overall idea):
    a4- npm version: 8.3.0
    a5- target chain: polygon (main net, test net)
    
-   a5- smart contract overall idea:
+   a6- smart contract overall idea:
        use svg to create erc-721 nft, where it's metadata totally stored on chain(the smart contract mint tokenurl to polygon chain).
        
 b- the main problem:
