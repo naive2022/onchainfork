@@ -25,3 +25,19 @@ b- the main problem:
    32000,"_isProviderError":true}, method="estimateGas", transaction={"from":"metamask wallet address","to":"contract address",
    
 c- what i try until now and the results:
+   1- try set the gas limit in "hardhat.config" but did not make any effect(it was during search so i do not remmber the form or values).
+   
+   2- in "01_Deploy_SVGNFT" add gaslimit to tx, so the code line look like next.
+      2-0 origonal code line before edit it:  tx = await svgNFT.create(svg)
+      2-1 code line after edit it:  tx = await svgNFT.create(svg, {gasLimit: 3000000 })
+      2-2 the result: give me some error message about wrong syntic (form, typing)
+   
+   3- in "01_Deploy_SVGNFT" add gaslimit to tx, so the code line look like next.
+      3-0 origonal code line before edit it:  tx = await svgNFT.create(svg)
+      3-1 code line after edit it:  tx = await svgNFT.create({svg}, {gasLimit: 3000000 })
+      3-2 the results:
+         3-2-0 contract deploying, svg uploading, contract verifying, the matic value decrease in metamask wallet(gas value transfer succeed) all thing look good.
+         3-2-1 when go to opensea there's no image appears.
+         3-2-2 when go to polygonscan or etherscan and use token id to see the token uri it return nothing (ther's no metadata string appears, nothing appears).
+         
+d- 
