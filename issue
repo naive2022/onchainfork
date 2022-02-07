@@ -16,7 +16,7 @@ a- general configurations(system, version, smart contract overall idea):
        use svg to create erc-721 nft, where it's metadata totally stored on chain(the smart contract mint tokenurl to polygon chain).
        
 b- the main problem:
-   every thing work good as the size of minted file (tokenurl) less than 23.8kb(small than 23.8 kb). where i target twice this size (every tokenurl equal 50kb).
+   every thing work good as the size of minted file (tokenurl) less than 23.8kb(small than 23.8 kb). where i target mint file that twice this size (every tokenurl equal 50kb).
    so when try mint tokenurl with size (23.8 Kb < size < 50 Kb) i recive next error message.
    
    An unexpected error occurred:
@@ -40,4 +40,8 @@ c- what i try until now and the results:
          3-2-1 when go to opensea there's no image appears.
          3-2-2 when go to polygonscan or etherscan and use token id to see the token uri it return nothing (ther's no metadata string appears, nothing appears).
          
-d- 
+d- the next github link for full code(contracts, deploy, hardhat.config.js, helper-hardhat-config.js and img folder that contunue (preproduced tokenurl)
+   https://github.com/naive2022/onchainfork
+
+hope help me find how can mint preproduced tokenurl(every file size is 50kb) without face this problem when use polygon test or polygon main network.
+thanks in advanced
