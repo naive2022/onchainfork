@@ -1,0 +1,27 @@
+greeting 
+1- i will start by writing the general configurations(system, version, smart contract overall idea).
+2- then i will show the main problem(with small code line, that i think it need edit).
+3- third part i will show what i try until now and the results
+4- at the end of i will add the full code.
+
+a- general configurations(system, version, smart contract overall idea):
+
+   a1- operation system: opensuse leap 15.3
+   a2- hardhat version: 2.8.3
+   a3- node version: v14.18.3
+   a4- npm version: 8.3.0
+   a5- target chain: polygon (main net, test net)
+   
+   a5- smart contract overall idea:
+       use svg to create erc-721 nft, where it's metadata totally stored on chain(the smart contract mint tokenurl to polygon chain).
+       
+b- the main problem:
+   every thing work good as the size of minted file (tokenurl) less than 23.8kb(small than 23.8 kb). where i target twice this size (every tokenurl equal 50kb).
+   so when try mint tokenurl with size (23.8 Kb < size < 50 Kb) i recive next error message.
+   
+   An unexpected error occurred:
+   Error: ERROR processing /home/naive/demos/secondtry/deploy/01_Deploy_SVGNFT.js:
+   Error: cannot estimate gas; transaction may fail or may require manual gas limit (error={"name":"ProviderError","code":-
+   32000,"_isProviderError":true}, method="estimateGas", transaction={"from":"metamask wallet address","to":"contract address",
+   
+c- what i try until now and the results:
